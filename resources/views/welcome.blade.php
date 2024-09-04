@@ -5,7 +5,7 @@
         <meta charset="utf-8" />
         <title>Semig | admin dashbord   </title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  
+
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -15,7 +15,7 @@
     </head>
 
     <body>
- 
+
         <div>
             <div class="container" >
                 <div class="row">
@@ -23,7 +23,7 @@
                         <div class="d-flex align-items-center min-vh-100">
                             <div class="w-100 d-block bg-white shadow-lg rounded my-5">
                                 <div class="row">
-                                    <div class="col-lg-5 d-none d-lg-block bg-login rounded-left" style="background-image: url('/3.jpg')">
+                                    <div class="col-lg-5 d-none d-lg-block bg-login rounded-left" style="background-image: url('/1.png')">
                                         {{-- <img src="" alt=""> --}}
                                     </div>
                                     <div class="col-lg-7">
@@ -44,10 +44,10 @@
                                                     <input type="password" name="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="mots de passe">
                                                 </div>
                                                 <input class="btn btn-success btn-block waves-effect waves-light" value="Log In" type="submit">
-    
+
                                                 {{-- <div class="text-center mt-4">
                                                     <h5 class="text-muted font-size-16">Sign in using</h5>
-                                                
+
                                                     <ul class="list-inline mt-3 mb-0">
                                                         <li class="list-inline-item">
                                                             <a href="javascript: void(0);" class="social-list-item border-primary text-primary"><i class="mdi mdi-facebook"></i></a>
@@ -63,7 +63,7 @@
                                                         </li>
                                                     </ul>
                                                 </div> --}}
-                                                
+
                                             </form>
                                                 @if ($errors->any())
                                                 <div class="alert alert-danger">
@@ -92,11 +92,11 @@
             <!-- end container -->
         </div>
         <!-- end page -->
-    
+
         <!-- jQuery  -->
         <!-- App js -->
         <script src="assets/js/theme.js"></script>
-    
+
     </body>
-    
+
     </html>
