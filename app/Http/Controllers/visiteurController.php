@@ -27,10 +27,10 @@ class visiteurController extends Controller
      */
     public function create()
     {
-        $request=date('Y-d-m');
-        // dd($request);
+        $request=(new \DateTime())->format( 'Y-m-d' );
+        dd($request);
         $visiteurs=Visites::where('date',$request)->get();
-        dd($visiteurs);
+        // dd($visiteurs);
         // $visiteurs=Visites::all();
         return view('visiteur.create',[
             'visiteurs'=>$visiteurs
