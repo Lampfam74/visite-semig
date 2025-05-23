@@ -1,5 +1,3 @@
-.PHONY: deploy install .env public/storage vendor/autoload.php public/build/manifest.json
-
 deploy:
 	echo "Déploiement..."
 	ssh raho2855@semig.lampedev.com  'cd ~/sites/visite-semig && git pull origin main && make install'
