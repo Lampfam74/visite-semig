@@ -1,4 +1,4 @@
-deploy:
+deploy:;:
     ssh o2switch 'cd ~/sites/visite-semig && git pull orin main && make install'
 
 install:vendor/autoload.php .env public/storage public/build/manifest.json
