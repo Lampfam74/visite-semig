@@ -1,5 +1,6 @@
 deploy:
-    ssh o2switch 'cd ~/sites/visite-semig && git pull orin main && make install'
+    echo "Déploiement..."   # <-- espaces ! ❌
+    ssh o2switch 'cd ~/sites/visite-semig &&     git pull origin main &&     make install'
 
 install:vendor/autoload.php .env public/storage public/build/manifest.json
     php artisan cache:clear
