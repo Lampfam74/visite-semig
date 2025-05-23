@@ -1,6 +1,15 @@
+<<<<<<< HEAD
+deploy:;:
+    ssh o2switch 'cd ~/sites/visite-semig && git pull orin main && make install'
+
+install:vendor/autoload.php .env public/storage public/build/manifest.json
+    php artisan cache:clear
+    php artisan migrate --force
+=======
 deploy:
 	echo 'Déploiement...'
 	ssh o2switch 'cd ~/sites/visite-semig && git pull origin main && make install'
+>>>>>>> f84bc047c15d253ab0adfb96b03cdff82fcb22e6
 
 install: vendor/autoload.php .env public/storage public/build/manifest.json
 	php artisan cache:clear
