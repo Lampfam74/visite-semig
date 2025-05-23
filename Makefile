@@ -1,4 +1,4 @@
-.PHONY: deploy  install .env public/storage vendor/autoload.php public/build/manifest.json
+.PHONY: deploy  install 
 
 deploy:
 	echo "Déploiement..."
