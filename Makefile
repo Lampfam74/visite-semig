@@ -1,8 +1,8 @@
-.PHONY: deploy  install 
+.PHONY: deploy  install
 
 deploy:
 	echo "Déploiement..."
-	ssh o2switch  'cd ~/sites/visite-semig && git pull origin main && make install'
+	ssh o2switch 'cd ~/sites/visite-semig && git pull origin main && make install'
 
 install: vendor/autoload.php .env public/storage public/build/manifest.json
 	php artisan cache:clear
