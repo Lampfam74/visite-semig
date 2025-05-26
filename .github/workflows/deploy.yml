@@ -1,0 +1,25 @@
+name: 🚀 Deploy to o2switch
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout
+        uses: actions/checkout@v3
+
+      - name: 🔐 SSH Deploy to o2switch
+        uses: appleboy/ssh-action@v1.0.0
+        with:
+          host: ${{ secrets.O2_HOST }}
+          username: ${{ secrets.O2_USER }}
+          key: ${{ secrets.O2_PRIVATE_KEY }}
+          port: 22
+          script: |
+            cd ~/sites/visite-semig
+            ./deploy/deploy.sh
