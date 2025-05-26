@@ -1,4 +1,4 @@
-name: 🚀 Deploy to o2switch
+name: 🚀 Déploiement FTP sur o2switch
 
 on:
   push:
@@ -6,20 +6,17 @@ on:
       - main
 
 jobs:
-  deploy:
+  ftp-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: 📥 Checkout
+      - name: 📦 Récupérer le code
         uses: actions/checkout@v3
 
-      - name: 🔐 SSH Deploy to o2switch
-        uses: appleboy/ssh-action@v1.0.0
+      - name: 🚀 Déploiement FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          host: ${{ secrets.O2_HOST }}
-          username: ${{ secrets.O2_USER }}
-          key: ${{ secrets.O2_PRIVATE_KEY }}
-          port: 22
-          script: |
-            cd ~/sites/visite-semig
-            ./deploy/deploy.sh
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./             # Dossier local à déployer
+          server-dir: public_html/sites/visite  # Répertoire distant (modifie si besoin)
