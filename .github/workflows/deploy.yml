@@ -22,4 +22,4 @@ jobs:
           port: 22
           script: |
             cd ~/sites/visite-semig
-            ./deploy.sh
+            ./deploy/deploy.sh
